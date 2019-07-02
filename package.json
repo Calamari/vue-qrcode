@@ -1,0 +1,88 @@
+{
+	"name": "@calamari/vue-qrcode",
+	"description": "Vue-js Component to create QR codes. Optionally with a logo inside. Definitely with TypeScript support.",
+	"version": "0.1.0",
+	"main": "dist/vue-qrcode.common.js",
+	"module": "dist/vue-qrcode.esm.js",
+	"unpkg": "dist/vue-qrcode.js",
+	"typings": "dist/vue-qrcode.d.ts",
+	"repository": "calamari/vue-qrcode",
+	"license": "MIT",
+	"author": {
+		"name": "Georg Tavonius",
+		"url": "https://webgeist.dev"
+	},
+	"files": [
+		"src",
+		"dist"
+	],
+	"keywords": [
+		"qrcode",
+		"QR code",
+		"QR code logo",
+		"vue-component",
+		"html",
+		"css",
+		"javascript",
+		"typescript"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"clear": "rm -rf dist",
+		"codecov": "cat coverage/lcov.info | codecov",
+		"compress": "uglifyjs ./dist/vue-qrcode.js -o ./dist/vue-qrcode.min.js -c -m --comments /^!/ --source-map",
+		"dev": "rollup -c -m -w",
+		"lint": "tslint *.ts --fix",
+		"release": "npm run clear && npm run lint && npm run build && npm run compress && npm test",
+		"start": "npm run dev",
+		"test": "jest"
+	},
+	"dependencies": {
+		"qrcode-generator": "^1.4.3"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@commitlint/cli": "^8.0.0",
+		"@commitlint/config-conventional": "^8.0.0",
+		"@microsoft/api-extractor": "^7.2.2",
+		"@types/jest": "^24.0.15",
+		"@vue/test-utils": "^1.0.0-beta.29",
+		"babel-plugin-istanbul": "^5.1.4",
+		"canvas": "^2.5.0",
+		"chai": "^4.2.0",
+		"change-case": "^3.1.0",
+		"codecov": "^3.5.0",
+		"create-banner": "^1.0.0",
+		"cross-env": "^5.2.0",
+		"husky": "^2.7.0",
+		"jest": "^24.8.0",
+		"jest-environment-jsdom": "^24.8.0",
+		"jest-environment-jsdom-global": "^1.2.0",
+		"jsdom": "^15.1.1",
+		"jsdom-global": "^3.0.2",
+		"jsqr": "^1.2.0",
+		"prettier": "^1.18.2",
+		"rollup": "^1.16.3",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-commonjs": "^10.0.1",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-typescript": "^1.0.1",
+		"rollup-watch": "^4.3.1",
+		"ts-jest": "^24.0.2",
+		"tslint": "^5.18.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.5.2",
+		"uglify-es": "^3.3.9",
+		"vue": "^2.6.10",
+		"vue-property-decorator": "^8.2.1"
+	},
+	"peerDependencies": {
+		"vue": "^2.0.0"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"ie >= 9"
+	]
+}
