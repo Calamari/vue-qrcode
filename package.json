@@ -52,7 +52,7 @@
 		"canvas": "^2.5.0",
 		"chai": "^4.2.0",
 		"change-case": "^3.1.0",
-		"codecov": "^3.5.0",
+		"codecov": "^3.8.3",
 		"create-banner": "^1.0.0",
 		"cross-env": "^5.2.0",
 		"husky": "^2.7.0",
